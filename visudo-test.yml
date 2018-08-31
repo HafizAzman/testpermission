@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+
+    - name: Configure zabbix agent
+                template:
+                src: templates/sudoersj2
+                dest: /etc/sudoers
+                mode: 0644
+                become: true
